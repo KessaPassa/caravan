@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3b85f51491.js" crossorigin="anonymous"></script>
     <title>Caravan</title>
   </header>
@@ -11,19 +12,57 @@
     <section class="header">
         <div class="wrap d-flex mx-auto justify-content-between">
             <img src="images/logo.png" height="70px">
-            <nav class="d-flex fs-6">
-                    <div class="mx-4 my-auto">Profile</div>
-                    <div class="mx-4 my-auto">Feature</div>
-                    <div class="mx-4 my-auto">Profile</div>
-                    <div class="mx-4 my-auto">Contact</div>
-            </nav>
+            <div class="d-md-flex d-none align-items-center">
+                <nav>
+                    <div class="d-flex list-unstyled">
+                        <li class="mx-3">
+                          <a class="text-white text-decoration-none" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="mx-3">
+                          <a class="text-white text-decoration-none" href="#feature">Feature</a>
+                        </li>
+                        <li class="mx-3">
+                          <a class="text-white text-decoration-none" href="#profile">Profile</a>
+                        </li>
+                        <li class="mx-3">
+                          <a class="text-white text-decoration-none" href="#contact">Contact</a>
+                        </li>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-md-none d-flex">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#"></a>
+                      <button class="navbar-toggler border-white border-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fas fa-bars fs-3 text-white"></span>
+                      </button>
+                      <div class="collapse navbar-collapse bg-light" id="navbarNavDropdown">
+                        <ul class="navbar-nav px-3">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#portfolio">Portfolio</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#feature">Feature</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#profile">Profile</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#contact">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     </section>
     <section class="main-visual d-flex flex-column align-items-center text-white">
         <div class="mb-3" style="font-size: 64px; margin-top: 200px;">Lorem Ipsum</div>
         <div class="fs-5">simply dummy text of the printing</div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="wrap mx-auto">
             <div class="fs-2 text-center mb-2">Portfolio</div>
             <div class="red-line mx-auto mb-5"></div>
@@ -33,16 +72,26 @@
                 <div>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</div>
             </div>
             <div class="pictures d-flex flex-wrap justify-content-between">
-                <img src="images/sketch.jpg" width="300px" height="250px" class="py-2">
-                <img src="images/websuku.png" width="300px" height="250px" class="py-2">
-                <img src="images/write.jpg" width="300px" height="250px" class="py-2">
-                <img src="images/webcamp.png" width="300px" height="250px" class="py-2">
-                <img src="images/talk.jpg" width="300px" height="250px" class="py-2">
-                <img src="images/webcamp-mother.png" width="300px" height="250px" class="py-2">
+                <div class="d-md-block d-none">
+                    <img src="images/sketch.jpg" width="300px" height="250px" class="py-2">
+                    <img src="images/websuku.png" width="300px" height="250px" class="py-2">
+                    <img src="images/write.jpg" width="300px" height="250px" class="py-2">
+                    <img src="images/webcamp.png" width="300px" height="250px" class="py-2">
+                    <img src="images/talk.jpg" width="300px" height="250px" class="py-2">
+                    <img src="images/webcamp-mother.png" width="300px" height="250px" class="py-2">
+                </div>
+                <div class="d-md-none d-block">
+                    <img src="images/sketch.jpg" width="100%" class="py-2">
+                    <img src="images/websuku.png" width="100%" class="py-2">
+                    <img src="images/write.jpg" width="100%" class="py-2">
+                    <img src="images/webcamp.png" width="100%" class="py-2">
+                    <img src="images/talk.jpg" width="100%" class="py-2">
+                    <img src="images/webcamp-mother.png" width="100%" class="py-2">
+                </div>
             </div>
         </div>
     </section>
-    <section class="feature">
+    <section id="feature" class="feature">
         <div class="wrap mx-auto">
             <div class="fs-2 text-center mb-2">Feature</div>
             <div class="red-line mx-auto mb-5"></div>
@@ -51,26 +100,45 @@
                 <div>content of a page when looking at its layout.</div>
                 <div>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</div>
             </div>
-            <div class="pictures d-flex flex-wrap justify-content-between">
-                <div style="width: 300px; height: 250px">
-                    <div class="text-center w-100 py-2 fa-solid fa-dumbbell" style="font-size: 60px;"></div>
-                    <div class="text-center fs-5 my-2">Strength1</div>
-                    <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+            <div class="pictures d-md-flex flex-wrap justify-content-between">
+                <div class="d-md-flex d-none">
+                    <div style="width: 300px; height: 250px">
+                        <div class="text-center w-100 py-2 fa-solid fa-dumbbell" style="font-size: 60px;"></div>
+                        <div class="text-center fs-5 my-2">Strength1</div>
+                        <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                    </div>
+                    <div style="width: 300px; height: 250px">
+                        <div class="text-center w-100 py-2 fa-solid fa-code" style="font-size: 60px;"></div>
+                        <div class="text-center fs-5 my-2">Strength2</div>
+                        <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                    </div>
+                    <div style="width: 300px; height: 250px">
+                        <div class="text-center w-100 py-2 fa-sharp fa-solid fa-magnifying-glass" style="font-size: 60px;"></div>
+                        <div class="text-center fs-5 my-2">Strength3</div>
+                        <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                    </div>
                 </div>
-                <div style="width: 300px; height: 250px">
-                    <div class="text-center w-100 py-2 fa-solid fa-code" style="font-size: 60px;"></div>
-                    <div class="text-center fs-5 my-2">Strength2</div>
-                    <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
-                </div>
-                <div style="width: 300px; height: 250px">
-                    <div class="text-center w-100 py-2 fa-sharp fa-solid fa-magnifying-glass" style="font-size: 60px;"></div>
-                    <div class="text-center fs-5 my-2">Strength3</div>
-                    <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                <div class="d-md-none d-block">
+                    <div style="width: 100%;">
+                        <div class="text-center w-100 py-2 fa-solid fa-dumbbell" style="font-size: 60px;"></div>
+                        <div class="text-center fs-5 my-2">Strength1</div>
+                        <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                    </div>
+                    <div style="width: 100%;">
+                        <div class="text-center w-100 py-2 fa-solid fa-code" style="font-size: 60px;"></div>
+                        <div class="text-center fs-5 my-2">Strength2</div>
+                        <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                    </div>
+                    <div style="width: 100%;">
+                        <div class="text-center w-100 py-2 fa-sharp fa-solid fa-magnifying-glass" style="font-size: 60px;"></div>
+                        <div class="text-center fs-5 my-2">Strength3</div>
+                        <div>Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="profile">
+    <section id="profile" class="profile">
         <div class="wrap mx-auto">
             <div class="fs-2 text-center mb-2">Profile</div>
             <div class="red-line mx-auto mb-5"></div>
@@ -79,13 +147,26 @@
                 <div>content of a page when looking at its layout.</div>
                 <div>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</div>
             </div>
-            <div class="profile__content d-flex">
-                <div class="left w-50">
-                    <div class="icon text-center">
-                        <img src="images/my-icon.jpg" width="250px" height="250px" class="rounded-circle" />
+            <div class="d-md-block d-none">
+                <div class="profile__content d-flex">
+                    <div class="left w-50">
+                        <div class="icon text-center">
+                            <img src="images/my-icon.jpg" width="250px" height="250px" class="rounded-circle" />
+                        </div>
+                    </div>
+                    <div class="right w-50">
+                        <div class="fs-4 mb-1">My Name</div>
+                        <div class="mb-4">Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
+                        <div class="fs-4 mb-1">My Skills</div>
+                        <div>HTML/CSS/JavaScript/JQuery/PhotoShop</div>
                     </div>
                 </div>
-                <div class="right w-50">
+            </div>
+            <div class="d-md-none d-block">
+                <div class="profile__content">
+                    <div class="icon text-center">
+                        <img src="images/my-icon.jpg" width="250px" height="250px" class="rounded-circle mb-3" />
+                    </div>
                     <div class="fs-4 mb-1">My Name</div>
                     <div class="mb-4">Contray to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mode obscure Latin words, consectetur</div>
                     <div class="fs-4 mb-1">My Skills</div>
@@ -94,7 +175,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="wrap mx-auto">
             <div class="fs-2 text-center mb-2">Contact</div>
             <div class="red-line mx-auto mb-5"></div>
@@ -103,14 +184,30 @@
                 <div>content of a page when looking at its layout.</div>
                 <div>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</div>
             </div>
-            <div class="contact__content d-flex w-75 mx-auto">
-                <div class="left w-50 ms-5">
+            <div class="d-md-block d-none">
+                <div class="contact__content d-flex w-75 mx-auto">
+                    <div class="left w-50 ms-5">
+                        <div class="fs-4 mb-1">Mail</div>
+                        <div class="mb-3">xxx@xx.com</div>
+                        <div class="fs-4 mb-1">Tel</div>
+                        <div>000-0000-0000</div>
+                    </div>
+                    <div class="right w-50">
+                        <div class="fs-4 mb-1">SNS</div>
+                        <div class="sns-icons d-flex flex-wrap justify-content-evenly">
+                            <div class="fa-brands fa-facebook-f" style="font-size: 50px;"></div>
+                            <div class="fa-brands fa-twitter" style="font-size: 50px;"></div>
+                            <div class="fa-brands fa-instagram" style="font-size: 50px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none d-block">
+                <div class="contact__content text-center">
                     <div class="fs-4 mb-1">Mail</div>
                     <div class="mb-3">xxx@xx.com</div>
                     <div class="fs-4 mb-1">Tel</div>
-                    <div>000-0000-0000</div>
-                </div>
-                <div class="right w-50">
+                    <div class="mb-3">000-0000-0000</div>
                     <div class="fs-4 mb-1">SNS</div>
                     <div class="sns-icons d-flex flex-wrap justify-content-evenly">
                         <div class="fa-brands fa-facebook-f" style="font-size: 50px;"></div>
@@ -135,6 +232,10 @@
 
         .wrap {
             width:  1024px;
+
+            @media (max-width: 768px) {      
+                width:  90%;          
+            }
         }
     }
 
@@ -150,6 +251,10 @@
 
         .wrap {
             width: 920px;
+
+            @media (max-width: 768px) {      
+                width:  90%;          
+            }
         }
     }
 
@@ -158,6 +263,10 @@
 
         .wrap {
             width: 980px;
+
+            @media (max-width: 768px) {      
+                width:  90%;          
+            }
         }
     }
 
@@ -167,6 +276,16 @@
 
         .wrap {
             width: 1024px;
+
+            @media (max-width: 768px) {      
+                width:  90%;          
+            }
+        }
+
+        .right {
+            @media (max-width: 768px) {      
+                margin-top: 20px;          
+            }
         }
     }
 
@@ -175,6 +294,10 @@
 
         .wrap {
             width: 800px;
+
+            @media (max-width: 768px) {      
+                width:  90%;          
+            }
         }
     }
 
